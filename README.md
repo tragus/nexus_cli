@@ -1,8 +1,11 @@
 # Nexus CLI
 
-This is a fork of the [Riot Games nexus_cli gem](https://github.com/RiotGamesMinions/nexus_cli) master at [1b0d1f403bded2a4eaf9548f1f81a97bbf12bbf1]([)https://github.com/tragus/nexus_cli/commit/1b0d1f403bded2a4eaf9548f1f81a97bbf12bbf1). I have added support for configuring the OSS LDAP feature once it has been enabled.
-
 A CLI wrapper around Sonatype Nexus REST calls.
+
+This is a fork of the [Riot Games nexus_cli gem](https://github.com/RiotGamesMinions/nexus_cli) master at [1b0d1f403bded2a4eaf9548f1f81a97bbf12bbf1](https://github.com/tragus/nexus_cli/commit/1b0d1f403bded2a4eaf9548f1f81a97bbf12bbf1).
+
+* Adds support for configuring the OSS LDAP feature once it has been enabled by upload_global_settings.
+* Includes [PR109](https://github.com/RiotGamesMinions/nexus_cli/pull/109), jmorley's addition for capabilities support.
 
 # Requirements
 
