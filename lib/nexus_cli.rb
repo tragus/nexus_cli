@@ -29,6 +29,7 @@ module NexusCli
   autoload :OssLdapSettingsActions, 'nexus_cli/mixins/oss_ldap_settings_actions'
   autoload :UserActions, 'nexus_cli/mixins/user_actions'
   autoload :RepositoryActions, 'nexus_cli/mixins/repository_actions'
+  autoload :CapabilityActions, 'nexus_cli/mixins/capability_actions'
   autoload :LoggingActions, 'nexus_cli/mixins/logging_actions'
   autoload :CustomMetadataActions, 'nexus_cli/mixins/pro/custom_metadata_actions'
   autoload :SmartProxyActions, 'nexus_cli/mixins/pro/smart_proxy_actions'
