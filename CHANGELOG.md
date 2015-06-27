@@ -1,3 +1,6 @@
+# 4.1.0+
+* PR#xxx : Add support for OSS LDAP configuration
+
 # 4.1.0
 
 * [#92](https://github.com/RiotGames/nexus_cli/pull/92) Added a new task for gettting an artifact's download URL
