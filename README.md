@@ -13,9 +13,10 @@ This is a fork of the [Riot Games nexus_cli gem](https://github.com/RiotGamesMin
 
 # Installation
 
-1. Install the Gem - `gem install nexus_cli`
-2. Create a file in your user's home directory named `.nexus_cli`
-3. Give the file the following information:
+1. Build the Gem - `gem build tragus_nexus_cli.gemspec`
+2. Install the Gem - `gem install --local tragus_nexus_cli-4.2.0.gem`
+3. Create a file in your user's home directory named `.nexus_cli`
+4. Give the file the following information:
 
 ```
 url: 			"http://my-nexus-server/nexus/"
@@ -108,6 +109,14 @@ nexus-cli search_for_artifacts com.mycompany.artifacts:myartifact
 or more generic if you wish:
 
 nexus-cli search_for_artifacts com.mycompany.artifacts
+```
+
+# Unit Tests
+
+```
+bundle install
+bundle update ffi
+bundle exec rspec spec
 ```
 
 # License and Author

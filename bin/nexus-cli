@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 $:.push File.expand_path("../../lib", __FILE__)
-require 'nexus_cli'
+require 'tragus_nexus_cli'
 
 begin
   NexusCli::Cli.start

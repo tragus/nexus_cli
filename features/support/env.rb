@@ -15,7 +15,7 @@ end
 
 Spork.prefork do
   require 'aruba/cucumber'
-  require 'nexus_cli'
+  require 'tragus_nexus_cli'
   require 'rspec'
 
   World(ArubaOverrides)
@@ -60,5 +60,5 @@ Spork.prefork do
 end
 
 Spork.each_run do
-  require 'nexus_cli'
+  require 'tragus_nexus_cli'
 end

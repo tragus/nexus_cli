@@ -5,7 +5,7 @@ require 'bundler'
 require 'bundler/setup'
 
 require 'thor/rake_compat'
-require 'nexus_cli'
+require 'tragus_nexus_cli'
 
 class Default < Thor
   include Thor::RakeCompat

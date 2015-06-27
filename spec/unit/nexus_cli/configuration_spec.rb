@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'os'
 
 describe NexusCli::Configuration do
   subject { configuration }
@@ -71,7 +72,11 @@ describe NexusCli::Configuration do
     end
 
     context "when the NEXUS_CONFIG environment variable exists" do
-      let(:nexus_config_path) { "/home/var/nexus_cli" }
+      if OS.windows?
+        let(:nexus_config_path) { "c:/home/var/nexus_cli" }
+      else
+        let(:nexus_config_path) { "/home/var/nexus_cli" }
+      end
 
       before do
         ENV['NEXUS_CONFIG'] = nexus_config_path
@@ -124,7 +129,7 @@ describe NexusCli::Configuration do
     end
   end
 
-  describe "#url" do  
+  describe "#url" do
     it "returns the url" do
       expect(config_instance.url).to eq("http://somewebsite.com")
     end

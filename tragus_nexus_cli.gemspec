@@ -3,11 +3,11 @@ $:.push File.expand_path("../lib", __FILE__)
 require 'nexus_cli/version'
 
 Gem::Specification.new do |s|
-  s.name        = "nexus_cli"
+  s.name        = "tragus_nexus_cli"
   s.version     = NexusCli.version
-  s.authors     = ["Kyle Allan"]
-  s.email       = ["kallan@riotgames.com"]
-  s.homepage    = "https://github.com/RiotGames/nexus_cli"
+  s.authors     = ["Kyle Allan","James Johnson"]
+  s.email       = ["kallan@riotgames.com","jcejohnson@gmail.com"]
+  s.homepage    = "https://github.com/tragus/nexus_cli"
   s.summary     = %q{A command-line wrapper for making REST calls to Sonatype Nexus.}
   s.description = s.summary
   s.licenses     = ["Apache 2.0"]
