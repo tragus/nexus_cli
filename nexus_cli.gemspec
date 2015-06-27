@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 require 'nexus_cli/version'
 
 Gem::Specification.new do |s|
-  s.name        = "tragus_nexus_cli"
+  s.name        = "nexus_cli"
   s.version     = NexusCli.version
   s.authors     = ["Kyle Allan"]
   s.email       = ["kallan@riotgames.com"]
