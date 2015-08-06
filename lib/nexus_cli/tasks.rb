@@ -207,6 +207,23 @@ module NexusCli
           end
         end
 
+        method_option :type,
+          :type => :string,
+          :desc => "The typeId of the capability to update"
+        method_option :enabled,
+          :type => :boolean,
+          :desc => "Whether the capability is enabled or not, true by default."
+        method_option :properties,
+          :type => :hash,
+          :desc => "Json array of properties to use for the capability"
+        desc "update_capability type", "Updates the capability with the provided id."
+        def update_capability(id)
+          new_id = nexus_remote.update_capability(id, type, options[:enabled], options[:properties])
+          if new_id
+            say "A new Capability with an id of #{new_id} has been updated.", :blue
+          end
+        end
+
         desc "delete_capability id", "Deletes a capability with the provided id."
         def delete_capability(id)
           if nexus_remote.delete_capability(id)

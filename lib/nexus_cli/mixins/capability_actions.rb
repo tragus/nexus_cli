@@ -24,6 +24,27 @@ module NexusCli
       end
     end
 
+    # Updates the given capability
+    #
+    # @param  id [Int] the id of the capability to update.
+    # @param  type [String] the typeId of the capability to update
+    # @param  enabled [Boolean] true if this capability is enabled
+    # @param  properties [Hash] hash of the properties for the capability
+    #
+    # @return [Int] returns id of the  on success
+    def update_capability(id, type, enabled, properties)
+      json = create_capability_json(type, enabled, properties)
+      response = nexus.put(nexus_url("service/siesta/capabilities/#{id}"), :body => json, :header => DEFAULT_CONTENT_TYPE_HEADER)
+      case response.status
+      when 200
+        return id
+      when 400
+        raise CreateCapabilityException.new(response.content)
+      else
+        raise UnexpectedStatusCodeException.new(response.status)
+      end
+    end
+
     # Deletes the given capability
     #
     # @param  id [Int] the id of the capability to delete.
