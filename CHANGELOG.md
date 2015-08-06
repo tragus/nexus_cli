@@ -1,3 +1,7 @@
+# 4.3.0
+* Adds support for configuring the OSS LDAP feature once it has been enabled by upload_global_settings.
+* Includes [PR109](https://github.com/RiotGamesMinions/nexus_cli/pull/109), jmorley's addition for capabilities support.
+
 # 4.2.0
 * [#114](https://github.com/RiotGamesMinions/nexus_cli/pull/114)
 
